@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio</title>
+
+    <!-- RESPONSIVE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body{
+            background-image: url("img/biblioteca.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        h1{
+            background: darkgoldenrod;
+            text-align: center;
+            color: white;
+            padding: 15px 10px;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            background-color: rgba(255,255,255,0.95);
+            text-align: center;
+            padding: 15px;
+            width: 60%;
+            max-width: 800px;
+            margin: 30px auto;
+            border: 2px solid darkgoldenrod;
+            box-sizing: border-box;
+        }
+
+        /* MENÚ FLEXIBLE */
+        nav{
+            background: darkgoldenrod;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* MEDIA QUERIES TABLET */
+        @media (max-width: 768px) {
+            h2 {
+                width: 80%;
+                font-size: 18px;
+                padding: 12px;
+            }
+
+            nav a {
+                padding: 10px 12px;
+            }
+        }
+
+        /* MEDIA QUERIES MÓVIL */
+        @media (max-width: 480px) {
+            h2 {
+                width: 90%;
+                font-size: 16px;
+                padding: 10px;
+                margin: 20px auto;
+            }
+
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>Biblioteca</h1>
+<nav>
+    <a href="Catalogo_Responsive.html">Catálogo</a>
+    <a href="formularios_Responsive.html">Formulario</a>
+    <a href="Servicios_Responsive.html">Servicios</a>
+    <a href="../index.html">Volver a la selección de web</a>
+</nav>
+<h2>Esta página web es una biblioteca online donde vas a poder comprar los mejores libros</h2>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+
+    <!-- RESPONSIVE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            background-image: url("../img/biblioteca.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        h1{
+            background: darkgoldenrod;
+            text-align: center;
+            color: white;
+            padding: 15px 10px;
+            margin-bottom: 0;
+        }
+
+        /* MENÚ RESPONSIVE */
+        nav{
+            background: darkgoldenrod;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* FORMULARIO */
+        form {
+            background-color: rgba(255, 255, 255, 0.95); /* fondo semi-transparente */
+            width: 80%;
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 5px;
+            border: 2px solid darkgoldenrod;
+            box-sizing: border-box;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        /* INPUTS Y TEXTAREA RESPONSIVE */
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        button[type="submit"] {
+            background-color: darkgoldenrod;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #b58d3d;
+        }
+
+        /* MEDIA QUERIES TABLET */
+        @media (max-width: 768px) {
+            form {
+                width: 90%;
+                padding: 20px;
+            }
+
+            button[type="submit"] {
+                width: 100%;
+            }
+
+            nav a {
+                padding: 10px 12px;
+            }
+        }
+
+        /* MEDIA QUERIES MÓVIL */
+        @media (max-width: 480px) {
+            form {
+                width: 95%;
+                padding: 15px;
+            }
+
+            button[type="submit"] {
+                width: 100%;
+            }
+
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+<h1>Biblioteca</h1>
+
+<nav>
+    <a href="inicio_Responsive.html.html">Inicio</a>
+    <a href="Catalogo_Responsive.html.html">Catálogo</a>
+    <a href="Servicios_Responsive.html.html">Servicios</a>
+    <a href="../index.html">Volver a la selección de web</a>
+</nav>
+
+<form action="#" method="post">
+
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre" required>
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" name="edad" min="0" max="120">
+
+    <label for="curso">Has leído algún libro de nuestra biblioteca</label>
+    <select id="curso" name="curso">
+        <option value="">Selecciona...</option>
+        <option>Si</option>
+        <option>No</option>
+    </select>
+
+    <label for="comentarios">Comentarios:</label>
+    <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escribe tus comentarios..."></textarea>
+
+    <label>
+        <input type="checkbox" name="boletin" value="sí">
+        Deseo recibir correos de nueva información
+    </label>
+
+    <button type="submit">Enviar</button>
+</form>
+
+</body>
+</html>

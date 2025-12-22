@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Catálogo</title>
+
+    <!-- RESPONSIVE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
-            background-image: url("img/biblioteca.jpeg");
+            background-image: url("../img/biblioteca.jpeg");
             background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             font-family: Arial, sans-serif;
             margin: 0;
         }
@@ -19,11 +26,13 @@
             margin-bottom: 0;
         }
 
+        /* FLEXBOX (Flexbox Froggy) */
         nav {
             background: darkgoldenrod;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
             padding: 10px 0;
-            margin-top: 0;
             margin-bottom: 20px;
         }
 
@@ -34,10 +43,13 @@
             font-weight: bold;
         }
 
+        /* GRID (Grid Garden) */
         .catalogo {
             width: 80%;
-            max-width: 600px;
             margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
 
         .libro {
@@ -45,12 +57,12 @@
             padding: 20px;
             border-radius: 5px;
             border: 2px solid darkgoldenrod;
-            margin-bottom: 20px;
             text-align: center;
         }
 
+        /* CSS Speedrun */
         .libro img {
-            width: 150px;
+            max-width: 100%;
             height: auto;
             margin-bottom: 10px;
         }
@@ -63,42 +75,58 @@
         .libro p {
             font-size: 14px;
         }
+
+        /* TABLET */
+        @media (max-width: 768px) {
+            .catalogo {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* MÓVIL */
+        @media (max-width: 480px) {
+            .catalogo {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
+
 <body>
 
 <h1>Biblioteca</h1>
 
 <nav>
-    <a href="inicio.html">Inicio</a>
-    <a href="Catálogo.html">Catálogo</a>
-    <a href="main.html">Página principal</a>
-    <a href="Servicios.html">Servicios</a>
+    <a href="inicio_Responsive.html">Inicio</a>
+    <a href="Servicios_Responsive.html">Servicios</a>
+    <a href="formularios_Responsive.html">Formularios</a>
+    <a href="../index.html">Volver a la selección</a>
 </nav>
 
 <div class="catalogo">
 
     <div class="libro">
-        <img src="img/kagurabachi-509x800.jpeg" alt="Kagurabachi Tomo 1">
+        <img src="../img/kagurabachi-509x800.jpeg" alt="Kagurabachi Tomo 1">
         <h3>Kagurabachi — Tomo 1</h3>
         <p><strong>Autor:</strong> Takeru Hokazono</p>
         <p>Manga de acción y venganza protagonizado por un joven espadachín.</p>
     </div>
 
     <div class="libro">
-        <img src="img/librotroll.jpg" alt="Libro Troll">
+        <img src="../img/librotroll.jpg" alt="Libro Troll">
         <h3>Libro Troll</h3>
         <p><strong>Autor:</strong> El Rubius</p>
         <p>Un libro lleno de retos, bromas y humor troll del famoso youtuber.</p>
     </div>
 
     <div class="libro">
-        <img src="img/inazuma.jpeg" alt="Inazuma Eleven Tomo 1">
+        <img src="../img/inazuma.jpeg" alt="Inazuma Eleven Tomo 1">
         <h3>Inazuma Eleven — Tomo 1</h3>
         <p><strong>Autor:</strong> Tenya Yabuno</p>
         <p>Manga de fútbol y superación basado en el famoso videojuego.</p>
     </div>
 
 </div>
+
 </body>
 </html>

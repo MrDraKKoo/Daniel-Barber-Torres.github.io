@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Servicios</title>
+
+    <!-- RESPONSIVE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body{
             background-image: url("img/biblioteca.jpeg");
             background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             font-family: Arial, sans-serif;
+            margin: 0;
         }
+
         h1{
             background: darkgoldenrod;
             text-align: center;
@@ -16,36 +25,46 @@
             padding: 15px 10px;
             margin-bottom: 0;
         }
+
         h2 {
-            background-color: white;
+            background-color: rgba(255,255,255,0.95);
             text-align: center;
             padding: 15px;
             width: 60%;
+            max-width: 800px;
             margin: 30px auto;
             border: 2px solid darkgoldenrod;
+            box-sizing: border-box;
         }
+
+        /* MENÚ FLEXIBLE */
         nav{
             background: darkgoldenrod;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
             padding: 10px 0;
-            margin-top: 0;
             margin-bottom: 20px;
         }
+
         nav a {
             color: white;
             text-decoration: none;
             padding: 10px 15px;
             font-weight: bold;
+            text-align: center;
         }
 
+        /* CONTENEDOR DE SERVICIOS */
         .services-container {
-            background-color: white;
+            background-color: rgba(255,255,255,0.95);
             width: 80%;
             max-width: 800px;
             margin: 20px auto;
             padding: 30px;
             border-radius: 8px;
             border: 2px solid darkgoldenrod;
+            box-sizing: border-box;
         }
 
         h3 {
@@ -70,16 +89,63 @@
         .services-container p:last-child {
             font-style: italic;
             color: #555;
+            text-align: center;
+        }
+
+        /* MEDIA QUERIES TABLET */
+        @media (max-width: 768px) {
+            h2 {
+                width: 85%;
+                font-size: 18px;
+                padding: 20px;
+            }
+
+            .services-container {
+                width: 90%;
+                padding: 25px;
+            }
+
+            nav a {
+                padding: 10px 12px;
+            }
+
+            ul {
+                padding-left: 20px;
+            }
+        }
+
+        /* MEDIA QUERIES MÓVIL */
+        @media (max-width: 480px) {
+            h2 {
+                width: 90%;
+                font-size: 16px;
+                padding: 15px;
+                margin: 20px auto;
+            }
+
+            .services-container {
+                width: 95%;
+                padding: 20px;
+            }
+
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+
+            ul {
+                padding-left: 15px;
+            }
         }
     </style>
 </head>
 <body>
 <h1>Biblioteca</h1>
 <nav>
-    <a href="inicio.html">Inicio</a>
-    <a href="Catálogo.html">Catálogo</a>
-    <a href="formularios.html">Formulario</a>
-    <a href="index.html">Pagina principal</a>
+    <a href="inicio_Responsive.html">Inicio</a>
+    <a href="Catalogo_Responsive.html">Catálogo</a>
+    <a href="formularios_Responsive.html">Formulario</a>
+    <a href="../index.html">Volver a la selección de web</a>
 </nav>
 <div class="services-container">
     <h2>Nuestros Servicios: Tu Biblioteca Online</h2>
@@ -107,7 +173,7 @@
         <li><strong>Comunidad Lectora:</strong> Te ofrecemos recomendaciones personalizadas y listas de lectura, para que descubras tu próxima gran aventura literaria.</li>
     </ul>
 
-    <p style="text-align: center; margin-top: 30px;">¡Explora, compra y disfruta la lectura con la mayor comodidad!</p>
+    <p>¡Explora, compra y disfruta la lectura con la mayor comodidad!</p>
 </div>
 </body>
 </html>
